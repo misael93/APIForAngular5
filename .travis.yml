@@ -1,0 +1,16 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: "ZBZwxpzjfb+kFf/kA76aYSKxT26O2EoHSEzW8fd0YSkJRW6gDXG7sTFrZOtxqdapABni5vCCxdQCPwc8Nz6ioddQgNLRiLcc7QDBGo/nhUb1FtXsQRv6keVzB82xthPzOUm6hhRzGn7uvqUQL436cTDZ2kp59zsa07gfkozWeqRQvztC0szM8m+S8MmptIZGvuFwf0yHAv9wRUl/6Cko7T6+wAPz5ymkOT+ETjHSNJbJh5gjkyFUoIAqDNMWx4pDkTLXPtwLMLHw08i8Mv/G0w3lgMKZgumooukTuE9GTzSDa9u3vp0Nzz4NiwXy45QfcTTZxIPsb86PDuuSdDSZOvyNWqNYVRLzO3Vsch5ceIOqyNPXvlPGcM0lmD6xc66yaqZqd7qUpPyKdCk2opdUbTQUe1RJciU1kjfPvE2gGR+jPKjpPclx9uKqZBMpkcPbE0QaWLrU0ggNQYiHe6d8ZPYb1sSJ1u+Vm03J0zdpCx61WmSEpn37PtMOkZX7Dx43Slr1XTZHUswUD/SLlMGyOIm/bAUyQzeAgKoDxKYgPjmTXVCHD3VNNvHCzpJoLOBhziHfWF3nXdQImsij9OlAV+wtUqZi8iAB5bPGV8OouXlJb4mgv9g33UGGMehCNxIc4TYgjE2Dlh96q+pP2i1mYRdBpmerY0GntHklJqIznr8="
+  app: my-music-server
+  on:
+    repo: cvillicana/BasicAPI
+language: node_js
+node_js: node
+services: mongodb
+cache:
+  directories:
+  - node_modules
+env:
+  NODE_ENV:
+    dev
